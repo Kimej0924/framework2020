@@ -2,9 +2,7 @@ package com.bit.SpringJava;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.bit.service.Remote;
-import com.bit.service.Remote2;
-import com.bit.service.Remote3;
+import com.bit.service.*;
 
 public class SpringJava {
 

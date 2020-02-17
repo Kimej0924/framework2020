@@ -3,6 +3,7 @@ package com.bit.model.entity;
 import java.sql.Timestamp;
 
 public class Emp01Vo {
+
 	private int sabun;
 	private String name;
 	private Timestamp nalja;
@@ -10,7 +11,15 @@ public class Emp01Vo {
 	private int deptno;
 	
 	public Emp01Vo() {
-		// TODO Auto-generated constructor stub
+	}
+
+	public Emp01Vo(int sabun, String name, Timestamp nalja, int pay, int deptno) {
+		super();
+		this.sabun = sabun;
+		this.name = name;
+		this.nalja = nalja;
+		this.pay = pay;
+		this.deptno = deptno;
 	}
 
 	public int getSabun() {
@@ -50,15 +59,6 @@ public class Emp01Vo {
 	}
 
 	public void setDeptno(int deptno) {
-		this.deptno = deptno;
-	}
-
-	public Emp01Vo(int sabun, String name, Timestamp nalja, int pay, int deptno) {
-		super();
-		this.sabun = sabun;
-		this.name = name;
-		this.nalja = nalja;
-		this.pay = pay;
 		this.deptno = deptno;
 	}
 
