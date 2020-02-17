@@ -12,7 +12,9 @@
 <script type="text/javascript" src="/sts02/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<c:if test="${param.err ne null }">
+<div class="alert alert-warning" role="alert">${param.err }</div>
+</c:if>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -21,7 +23,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">입력페이지</h4>
       </div>
-      <form action="add.bit" method="">
+      <form action="add.bit" method="POST">
       <div class="modal-body">
         <div class="form-group">
 		    <label for="dname">부서명</label>
@@ -66,12 +68,14 @@
 			<th>번호</th>
 			<th>부서명</th>
 			<th>지역</th>
+			<th>삭제</th>
 		</tr>
 		<c:forEach items="${list }" var="bean">
 			<tr>
 				<td>${bean.deptno }</td>
 				<td>${bean.dname }</td>
 				<td>${bean.loc }</td>
+				<td><form action="delete.bit" method="post"><input type="hidden" name="deptno" value="${bean.deptno }"/><button>삭제</button></form></td>
 			</tr>
 		</c:forEach>
 	</table>	
