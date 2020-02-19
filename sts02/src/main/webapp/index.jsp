@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 
-	window.location.href="./dept/list.bit";
+// 	window.location.href="./dept/list.bit";
+// 	window.location.href="./emp/list.bit";
+	window.location.href="./login/login.bit";
 
 </script>
 </head>

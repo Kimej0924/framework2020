@@ -46,10 +46,6 @@
 <div class="row">
   	<div class="col-md-12">
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-	입력
-</button>  	
-  	
 	  	<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
@@ -57,12 +53,31 @@
 		        <div>비트교육센터</div>
 		      </a>
 		    </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      		<ul class="nav navbar-nav">
+	      			<li><a href="/sts02/">HOME</a></li>
+	      			<li class="active"><a href="/sts02/dept/list.bit">DEPT</a></li>
+	      			<li><a href="/sts02/emp/list.bit">E M P</a></li>
+	      			<c:if test="${sessionScope.login eq null }">
+	      			<li><a href="/sts02/login/login.bit">LOGIN</a></li>
+	      			</c:if>
+	      			<c:if test="${sessionScope.login ne null }">
+	      			<li><a href="/sts02/login/logout.bit">LOGOUT</a></li>
+	      			</c:if>
+        		</ul>
+        		<c:if test="${sessionScope.login ne null }">
+        		<p class="navbar-text"> ${login }님 환영합니다</p>
+        		</c:if>
+        	</div>
 		  </div>
 		</nav>
   	</div>
 </div>
 <div class="row">
   	<div class="col-md-12">
+  	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	입력
+	</button>  
 	<table class="table">
 		<tr>
 			<th>번호</th>
